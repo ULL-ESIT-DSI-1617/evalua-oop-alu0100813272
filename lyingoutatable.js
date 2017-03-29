@@ -1,4 +1,4 @@
-// Utils: Monkey Patching
+// Utils: Monkey Patching Modificar clase global extendiendola.
 String.prototype.repeat = function(times) {
   var result = "";
   for (var i = 0; i < times; i++)
@@ -60,6 +60,8 @@ TextCell.prototype.draw = function(width, height) {
 function UnderlinedCell(inner) {
   this.inner = inner;
 }
+///////////////////////////////////////////////////////////////////////////////
+//Cabecera
 /*
   minWidth() returns a number indicating this cell’s minimum width
   (in characters).
@@ -85,7 +87,8 @@ UnderlinedCell.prototype.draw = function(width, height) {
     .concat(["-".repeat(width)]);
 };    
 // End UnderlinedCell    
-
+///////////////////////////////////////////////////////////////////////////////
+////Alinacion a la derecha
 // RTextCell
 function RTextCell(text) {
   TextCell.call(this, text);
@@ -100,6 +103,7 @@ RTextCell.prototype.draw = function(width, height) {
   return result;
 };
 // End RTextCell    
+
 
 //---------------------------------------------
 /*

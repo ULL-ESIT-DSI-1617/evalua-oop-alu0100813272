@@ -78,6 +78,14 @@ function drawIt(data) {
 }
 
 
-    var MOUNTAINS = require("./mountains.json");
-console.log(drawIt(MOUNTAINS));
-   
+//var MOUNTAINS = require("./mountains.json");
+//console.log(drawIt(MOUNTAINS));
+module.exports = {
+  drawIt: drawIt,
+  drawTable: drawTable,
+  TextCell: TextCell,
+  RTextCell: RTextCell,
+  UnderlinedCell: UnderlinedCell
+};
+
+       
